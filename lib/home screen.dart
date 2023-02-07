@@ -212,8 +212,63 @@ class _HomeState extends State<Home> {
 
     int index;
 
+
+    // start - center
+     if (Player.playerx.containsall(0, 1) && empty.contains(2))
+    index = 2;
+    else if (Player.playerx.containsall(3, 4) && empty.contains(5))
+    index = 5;
+    else if (Player.playerx.containsall(6, 7) && empty.contains(8))
+    index = 8;
+    else if (Player.playerx.containsall(0, 3) && empty.contains(6))
+    index = 6;
+    else if (Player.playerx.containsall(1, 4) && empty.contains(7))
+    index = 7;
+    else if (Player.playerx.containsall(2, 5) && empty.contains(8))
+    index = 8;
+    else if (Player.playerx.containsall(0, 4) && empty.contains(8))
+    index = 8;
+    else if (Player.playerx.containsall(2, 4) && empty.contains(6))
+    index = 6;
+
+    // start - end
+    else if (Player.playerx.containsall(0, 2) && empty.contains(1))
+    index = 1;
+    else if (Player.playerx.containsall(3, 5) && empty.contains(4))
+    index = 4;
+    else if (Player.playerx.containsall(6, 8) && empty.contains(7))
+    index = 7;
+    else if (Player.playerx.containsall(0, 6) && empty.contains(3))
+    index = 3;
+    else if (Player.playerx.containsall(1, 7) && empty.contains(4))
+    index = 4;
+    else if (Player.playerx.containsall(2, 8) && empty.contains(5))
+    index = 5;
+    else if (Player.playerx.containsall(0, 8) && empty.contains(4))
+    index = 4;
+    else if (Player.playerx.containsall(2, 6) && empty.contains(4))
+    index = 4;
+
+// center - end
+    else if (Player.playerx.containsall(1, 2) && empty.contains(0))
+    index = 0;
+    else if (Player.playerx.containsall(4, 5) && empty.contains(3))
+    index = 3;
+    else if (Player.playerx.containsall(7, 8) && empty.contains(6))
+    index = 6;
+    else if (Player.playerx.containsall(3, 6) && empty.contains(0))
+    index = 0;
+    else if (Player.playerx.containsall(4, 7) && empty.contains(1))
+    index = 1;
+    else if (Player.playerx.containsall(5, 8) && empty.contains(2))
+    index = 2;
+    else if (Player.playerx.containsall(4, 8) && empty.contains(0))
+    index = 0;
+    else if (Player.playerx.containsall(4, 6) && empty.contains(2))
+    index = 2;
+
 //start - center
-    if (Player.playero.containsall(0, 1) && empty.contains(2))
+    else if (Player.playero.containsall(0, 1) && empty.contains(2))
       index = 2;
     else if (Player.playero.containsall(3, 4) && empty.contains(5))
       index = 5;
@@ -265,6 +320,8 @@ class _HomeState extends State<Home> {
       index = 0;
     else if (Player.playero.containsall(4, 6) && empty.contains(2))
       index = 2;
+
+
     else
       index = empty[r.nextInt(empty.length)];
     Player.playero.add(index);
